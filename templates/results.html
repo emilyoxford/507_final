@@ -1,0 +1,46 @@
+{% for chart in country_charts if chart != '--' %}
+    {{chart | safe}}
+{% endfor %}
+
+{% if news == 'Yes' %}
+    {% if country_1 != '--' %}
+        <h3>Top headlines from {{country_1}}:</h3>
+        <ul>
+            {% for headline in headlines_1 %}
+                <li>{{headline}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if country_2 != '--' %}
+        <h3>Top headlines from {{country_2}}:</h3>
+        <ul>
+            {% for headline in headlines_2 %}
+                <li>{{headline}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if country_3 != '--' %}
+        <h3>Top headlines from {{country_3}}:</h3>
+        <ul>
+            {% for headline in headlines_3 %}
+                <li>{{headline}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endif %}
+
+{% for chart in continent_charts if chart != '--' %}
+    {{chart | safe}}
+{% endfor %}
+
+<!--referenced for if/endif syntax: https://flask.palletsprojects.com/en/0.12.x/tutorial/templates/-->
+{% if country_charts == '' and continent_charts == '' %}
+    <h3>No results? Make sure to select at least one country or continent and try again.</h3>
+{% endif %}
+<p>
+    <a href = '/'>
+        <button>Search Again</button>
+    </a>
+</p>

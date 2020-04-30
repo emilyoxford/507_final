@@ -1,0 +1,68 @@
+<h1>COVID Capita</h1>
+<h2>COVID data (per capita!) and miscellaneous news around the globe</h2>
+
+<!--referenced https://www.w3schools.com/tags/tag_select.asp for select syntax-->
+
+
+<body>
+    <form action="/results" method="POST">
+        <label for = "country_1">Choose up to three countries:</label>
+
+            <select name = "country_1">
+                <option name = "--">--</option>
+                {% for country in countries %}
+                <option name = "country_1">{{country}}</option>
+                {% endfor %}
+            </select>
+
+            <select name = "country_2">
+                <option name = "--">--</option>
+                {% for country in countries %}
+                <option name = "country_2">{{country}}</option>
+                {% endfor %}
+            </select>
+
+            <select name = "country_3">
+                <option name = "--">--</option>
+                {% for country in countries %}
+                <option name = "country_3">{{country}}</option>
+                {% endfor %}
+            </select>
+
+        <h3>OR</h3>
+
+        <label for = "continuent">Choose up to three continents:</label>
+
+            <select name = "continent_1">
+                <option name = "--">--</option>
+                {% for continent in continents %}
+                <option name = "continent_1">{{continent}}</option>
+                {% endfor %}
+            </select>
+
+            <select name = "continent_2">
+                <option name = "--">--</option>
+                {% for continent in continents %}
+                <option name = "continent_2">{{continent}}</option>
+                {% endfor %}
+            </select>
+
+        <select name = "continent_3">
+            <option name = "--">--</option>
+            {% for continent in continents %}
+            <option name = "continent_3">{{continent}}</option>
+            {% endfor %}
+        </select>
+
+        <!--referenced https://bulma.io/documentation/form/radio/ to set default to "No."-->
+        <p>
+            <strong>Include top headlines for countries? (Default is "No.")</strong><br/>
+            <input type="radio" name="news" value="Yes">Yes<br/>
+            <input type="radio" name="news" value="No" checked>No<br/>
+        </p>
+
+        <p>
+            <input type="submit" value="View Results"/>
+        </p>
+    </form>
+</body>
