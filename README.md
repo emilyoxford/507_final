@@ -13,7 +13,6 @@ To run the Covid Capita Flask app, you will need to have the following packages 
 bs4
 datetime
 requests
-json
 csv
 sqlite3
 plotly.graph_objs
