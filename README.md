@@ -1,6 +1,6 @@
 # 507_final
 
-This repo contains five files:
+In this repo for the 507 Covid Capita app, you will find:
 
 run_covid_capita.py
 
