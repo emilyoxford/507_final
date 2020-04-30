@@ -17,13 +17,17 @@ templates (contains two files: index.html and results.html)
 To run the Covid Capita Flask app, you will need to have the following packages available on your machine:
 
 bs4
-datetime
+
 requests
-csv
+
 sqlite3
+
 plotly.graph_objs
+
 Flask
+
 numpy
+
 pandas
 
 For secrets.py, you will need to replace YOUR_KEY with your own NewsAPI key.
