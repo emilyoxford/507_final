@@ -33,4 +33,4 @@ pandas
 For secrets.py, you will need to replace YOUR_KEY with your own NewsAPI key.
 A key (if you do not already have one) can be obtained here: https://newsapi.org/register 
 
-You should be able to open and use the app the app simply by running run_covid_capita.py.
+After that, you should be able to open and use the app the app simply by running run_covid_capita.py.
