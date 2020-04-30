@@ -1,12 +1,18 @@
 # 507_final
 
-This repo contains three files:
+This repo contains five files:
 
 run_covid_capita.py
+
 data_covid_capita.py
+
 populations.sqlite
+
 secrets.py
+
 templates (contains two files: index.html and results.html)
+
+.gitignore (ignores your own secrets.py and any cache.json created by running run_covid_capita.py)
 
 To run the Covid Capita Flask app, you will need to have the following packages available on your machine:
 
